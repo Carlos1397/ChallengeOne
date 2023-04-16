@@ -93,17 +93,19 @@ function textoDesencript() {
   }
 };
  
-function soloLetrasMin(event) {
-  // Obtiene el código ASCII de la tecla presionada
-  var charCode = event.keyCode ? event.keyCode : event.which;
 
-  // Verifica si la tecla presionada es una letra minúscula sin acentos o un espacio
-  if ((charCode >= 97 && charCode <= 122) || charCode == 0 || charCode == 8 || charCode == 32) {
-    return true; // permite la entrada de la tecla
-  } else {
-    return false; // bloquea la entrada de la tecla
+  // se hace con el fin de validar el texto ingresado por un dispositivo
+  function validarTexto(input) {
+    const regex = /^[a-z ]*$/;
+    return regex.test(input);
   }
-}
+function validarTecla(event) {
+  const tecla = event.key;
+  const input = event.target.value + tecla;
+  if (!validarTexto(input)) {
+    event.preventDefault();
+  }
+} 
 
 
  
