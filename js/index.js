@@ -95,17 +95,14 @@ function textoDesencript() {
  
 
   // se hace con el fin de validar el texto ingresado por un dispositivo
-  function validarTexto(input) {
-    const regex = /^[a-z ]*$/;
-    return regex.test(input);
-  }
-function validarTecla(event) {
-  const tecla = event.key;
-  const input = event.target.value + tecla;
-  if (!validarTexto(input)) {
-    event.preventDefault();
-  }
-} 
+  
 
+function validarTexto(input) {
+  const regex = /^[a-z ]*$/;
+  const valor = input.value;
+  if (!regex.test(valor)) {
+    input.value = valor.slice(0, -1);
+  }
+}
 
  
