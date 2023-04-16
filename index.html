@@ -18,13 +18,11 @@
     <div class="container">
         <section class="section-left">
             <p>Ingrese el texto aquí</p>
-            <textarea id="input-texto" name="input-texto" rows="40" onkeypress="return soloLetrasMin(event)"></textarea>
-
+            <textarea id="input-texto" name="input-texto" rows="40" onkeypress="validarTecla(event)"></textarea>
             <p><span class="info-text">Solo letras minúsculas y sin acentos</span></p>
             <div class="button-container">
                 <button class="buttonEncriptar" onclick="textoEncript()">Encriptar</button>
                 <button class="buttonDesencriptar" onclick="textoDesencript()">Desencriptar</button>
-
             </div>
         </section>
 
@@ -37,7 +35,6 @@
             <div class="button-container-copiar">
                 <button id="buttonCopiar" style="display: none;" onclick="copiarTexto()">Copiar</button>
             </div>
-
         </section>
     </div>
     <footer>
