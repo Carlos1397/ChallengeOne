@@ -18,7 +18,8 @@
     <div class="container">
         <section class="section-left">
             <p>Ingrese el texto aquí</p>
-            <textarea id="input-texto" name="input-texto" rows="40" onkeypress="validarTecla(event)"></textarea>
+            <textarea id="input-texto" name="input-texto" rows="40" oninput="validarTexto(this)"></textarea>
+
             <p><span class="info-text">Solo letras minúsculas y sin acentos</span></p>
             <div class="button-container">
                 <button class="buttonEncriptar" onclick="textoEncript()">Encriptar</button>
